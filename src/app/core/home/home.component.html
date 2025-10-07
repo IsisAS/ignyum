@@ -15,33 +15,33 @@
     </div>
     
     <div class="hero-content">
-      <div class="product-visual">
-        <div class="jar-container">
-          <div class="jar">
-            <div class="jar-lid"></div>
-            <div class="jar-body">
-              <div class="floating-bubble fb-1"></div>
-              <div class="floating-bubble fb-2"></div>
-              <div class="floating-bubble fb-3"></div>
-            </div>
+      <div class="hero-text">
+        <div class="text-container">
+          <h1 class="headline">
+            <span class="brand">IGNYUM.</span>
+            <span class="tagline">The Luxury of Instant Energy.</span>
+          </h1>
+          
+          <p class="subheadline">
+            A primeira bolha sublingual tropical do mundo.<br>
+            <span class="highlight">Explode energia. Explode sabor. Instantaneamente.</span>
+          </p>
+          
+          <div class="cta-container">
+            <button class="cta-primary">
+              <span class="cta-text">🔥 EXPERIMENTE AGORA</span>
+              <div class="cta-shine"></div>
+            </button>
+            <p class="cta-subtitle">Energia instantânea em segundos</p>
           </div>
         </div>
       </div>
       
-      <div class="hero-text">
-        <h1 class="headline">
-          <span class="brand">IGNYUM.</span>
-          <span class="tagline">The Luxury of Instant Energy.</span>
-        </h1>
-        
-        <p class="subheadline">
-          A primeira bolha sublingual tropical do mundo.<br>
-          <span class="highlight">Explode energia. Explode sabor. Instantaneamente.</span>
-        </p>
-        
-        <button class="cta-primary">
-          🔘 EXPERIMENTE AGORA
-        </button>
+      <div class="product-visual">
+        <div class="real-bubble-showcase">
+          <img src="assets/image/buuble.png" alt="IGNYUM Bubble" class="hero-bubble-image">
+          <div class="bubble-glow-effect"></div>
+        </div>
       </div>
     </div>
   </section>
@@ -329,7 +329,7 @@
   display: flex;
   align-items: center;
   overflow: hidden;
-  background: #000000;
+  background: linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 100%);
 }
 
 .hero-background {
@@ -338,7 +338,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(circle at 30% 70%, #ff6b35 0%, #f7931e 25%, #000000 50%);
+  background: linear-gradient(135deg, rgba(255, 107, 53, 0.05) 0%, transparent 50%);
 }
 
 .neon-overlay {
@@ -347,16 +347,8 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: 
-    radial-gradient(circle at 20% 80%, rgba(255, 107, 53, 0.3) 0%, transparent 50%),
-    radial-gradient(circle at 80% 20%, rgba(247, 147, 30, 0.3) 0%, transparent 50%),
-    radial-gradient(circle at 40% 40%, rgba(0, 255, 127, 0.2) 0%, transparent 50%);
-  animation: neonPulse 4s ease-in-out infinite alternate;
-}
-
-@keyframes neonPulse {
-  0% { opacity: 0.7; }
-  100% { opacity: 1; }
+  background: radial-gradient(circle at 80% 20%, rgba(255, 107, 53, 0.08) 0%, transparent 60%);
+  opacity: 0.6;
 }
 
 .bubbles-container {
@@ -394,7 +386,67 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 40px;
+  min-height: 80vh;
 }
+
+.product-visual {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-text {
+  position: relative;
+  z-index: 15;
+}
+
+/* Real Bubble Showcase */
+.real-bubble-showcase {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+  z-index: 15;
+}
+
+.hero-bubble-image {
+  width: 280px;
+  height: auto;
+  filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.3));
+  animation: subtleFloat 6s ease-in-out infinite;
+  transition: all 0.3s ease;
+}
+
+.hero-bubble-image:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.4));
+}
+
+@keyframes subtleFloat {
+  0%, 100% { 
+    transform: translateY(0px);
+  }
+  50% { 
+    transform: translateY(-8px);
+  }
+}
+
+.bubble-glow-effect {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(255, 107, 53, 0.1) 0%, transparent 60%);
+  border-radius: 50%;
+  z-index: -1;
+}
+
+
 
 .jar-container {
   display: flex;
@@ -484,7 +536,20 @@
   font-weight: 600;
 }
 
+/* Text Container */
+.text-container {
+  position: relative;
+  z-index: 10;
+}
+
+/* CTA Container */
+.cta-container {
+  margin-top: 40px;
+  text-align: left;
+}
+
 .cta-primary {
+  position: relative;
   background: linear-gradient(135deg, #ff6b35, #f7931e);
   color: white;
   border: none;
@@ -494,12 +559,31 @@
   border-radius: 50px;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 10px 30px rgba(255, 107, 53, 0.4);
+  box-shadow: 0 8px 25px rgba(255, 107, 53, 0.3);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .cta-primary:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 15px 40px rgba(255, 107, 53, 0.6);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(255, 107, 53, 0.4);
+}
+
+.cta-shine {
+  display: none;
+}
+
+.cta-text {
+  position: relative;
+  z-index: 2;
+}
+
+.cta-subtitle {
+  margin-top: 15px;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+  font-style: italic;
+  text-align: center;
 }
 
 /* 2. O que é IGNYUM */
@@ -1021,6 +1105,25 @@
     grid-template-columns: 1fr;
     text-align: center;
     gap: 40px;
+    padding: 0 20px;
+    min-height: 90vh;
+  }
+  
+  .hero-text {
+    order: 2;
+  }
+  
+  .product-visual {
+    order: 1;
+  }
+  
+  .hero-bubble-image {
+    width: 220px;
+  }
+  
+  .bubble-glow-effect {
+    width: 250px;
+    height: 250px;
   }
   
   .headline {
@@ -1033,6 +1136,15 @@
   
   .tagline {
     font-size: 1.8rem;
+  }
+  
+  .cta-primary {
+    padding: 18px 40px;
+    font-size: 1.1rem;
+  }
+  
+  .cta-container {
+    text-align: center;
   }
   
   .content-grid,
