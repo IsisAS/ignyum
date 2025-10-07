@@ -1,11 +1,34 @@
 <!-- ANGIE & PAIGE - Premium Energy Bubbles Landing Page -->
 <div class="angie-paige-landing">
   
+  <!-- STICKY BAR - Conversão -->
+  <div class="sticky-conversion-bar" id="stickyBar">
+    <div class="sticky-content">
+      <span class="sticky-text">Pronta pra sentir o poder?</span>
+      <button class="sticky-cta" aria-label="Comprar Angie & Paige">Comprar</button>
+    </div>
+  </div>
+
+  <!-- EXIT INTENT MODAL - Conversão -->
+  <div class="exit-intent-modal" id="exitModal" role="dialog" aria-labelledby="modal-title" aria-hidden="true">
+    <div class="modal-backdrop"></div>
+    <div class="modal-content">
+      <button class="modal-close" aria-label="Fechar modal">&times;</button>
+      <h3 id="modal-title">🎁 Oferta Exclusiva de Lançamento!</h3>
+      <p>Ganhe 15% OFF na sua primeira compra</p>
+      <form class="email-capture">
+        <input type="email" placeholder="Seu melhor e-mail" aria-label="Digite seu e-mail" required>
+        <button type="submit">Quero o desconto</button>
+      </form>
+      <small>Cupom: ENERGIA15 • Válido por 48h</small>
+    </div>
+  </div>
+  
   <!-- [1] HERO SECTION - "A primeira joia de energia líquida" -->
-  <section class="hero-section">
+  <section class="hero-section" aria-labelledby="hero-title">
     <div class="hero-background">
       <div class="studio-lighting"></div>
-      <div class="floating-particles">
+      <div class="floating-particles" aria-hidden="true">
         <div class="particle p1"></div>
         <div class="particle p2"></div>
         <div class="particle p3"></div>
@@ -16,11 +39,11 @@
     
     <div class="hero-content">
       <div class="hero-visual">
-        <div class="macro-bubble-container">
+        <div class="macro-bubble-container parallax-element" data-speed="0.4" role="img" aria-label="Macro visual de uma bubble translúcida de energia líquida com partículas flutuantes e efeito de brilho laranja">
           <div class="macro-bubble">
             <div class="bubble-glow"></div>
             <div class="bubble-core"></div>
-            <div class="liquid-particles">
+            <div class="liquid-particles" aria-hidden="true">
               <div class="liquid-drop l1"></div>
               <div class="liquid-drop l2"></div>
               <div class="liquid-drop l3"></div>
@@ -30,7 +53,7 @@
       </div>
       
       <div class="hero-text">
-        <h1 class="hero-headline">
+        <h1 id="hero-title" class="hero-headline">
           A primeira joia de<br>
           <span class="energy-text">energia líquida.</span>
         </h1>
@@ -41,12 +64,13 @@
         </p>
         
         <div class="hero-ctas">
-          <button class="cta-primary">
+          <button class="cta-primary" aria-describedby="cta-description">
             <span class="cta-text">Quero sentir a energia</span>
             <div class="cta-glow"></div>
           </button>
           <button class="cta-secondary">Como funciona</button>
         </div>
+        <div id="cta-description" class="sr-only">Compre agora e experimente a energia líquida premium</div>
       </div>
     </div>
   </section>
@@ -99,14 +123,14 @@
     <div class="container">
       <div class="solution-content">
         <div class="solution-visual">
-          <div class="exploding-bubble-3d">
+          <div class="exploding-bubble-3d" role="img" aria-label="Animação 3D de uma bubble explodindo e liberando energia líquida com ondas de explosão e correntes de líquido">
             <div class="bubble-3d">
-              <div class="explosion-effect">
+              <div class="explosion-effect" aria-hidden="true">
                 <div class="explosion-wave w1"></div>
                 <div class="explosion-wave w2"></div>
                 <div class="explosion-wave w3"></div>
               </div>
-              <div class="liquid-release">
+              <div class="liquid-release" aria-hidden="true">
                 <div class="liquid-stream s1"></div>
                 <div class="liquid-stream s2"></div>
                 <div class="liquid-stream s3"></div>
@@ -150,87 +174,113 @@
     </div>
   </section>
 
-  <!-- [4] EXPERIÊNCIA SENSORIAL - "Toque. Sabor. Energia." -->
+  <!-- [4] EXPERIÊNCIA SENSORIAL - "Sinta a energia explodir" -->
   <section class="sensorial-section">
     <div class="container">
-      <div class="sensorial-content">
-        <div class="sensorial-visual">
-          <div class="mouth-artistic">
-            <div class="bubble-on-tongue">
-              <div class="tongue-glow"></div>
-              <div class="bubble-dissolving"></div>
-            </div>
+      <h2 class="sensorial-headline">
+        Sinta a energia <span class="explode-text">explodir</span>
+      </h2>
+      
+      <div class="sensorial-grid">
+        <div class="sensorial-card hover-card">
+          <div class="sensorial-icon">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="24" cy="24" r="20" stroke="#FF6B35" stroke-width="2" fill="none"/>
+              <circle cx="24" cy="24" r="12" fill="#FF6B35" opacity="0.3"/>
+              <circle cx="24" cy="24" r="6" fill="#FF6B35"/>
+              <path d="M24 4 L24 12 M24 36 L24 44 M4 24 L12 24 M36 24 L44 24" stroke="#FF6B35" stroke-width="2"/>
+            </svg>
           </div>
+          <h3>Explosão Sublingual</h3>
+          <p>Energia instantânea que explode na língua</p>
         </div>
         
-        <div class="sensorial-text">
-          <h2 class="sensorial-headline">
-            Toque. Sabor. Energia.<br>
-            <span class="experience-text">Uma explosão sublingual para desempenho e prazer.</span>
-          </h2>
-          
-          <div class="pillars-grid">
-            <div class="pillar-card">
-              <div class="pillar-icon">🚀</div>
-              <h3>Absorção rápida</h3>
-              <p>Direto na corrente sanguínea</p>
-            </div>
-            <div class="pillar-card">
-              <div class="pillar-icon">🎯</div>
-              <h3>Cognição ativa</h3>
-              <p>Foco mental aprimorado</p>
-            </div>
-            <div class="pillar-card">
-              <div class="pillar-icon">⚡</div>
-              <h3>Energia prolongada</h3>
-              <p>Performance sustentada</p>
-            </div>
-            <div class="pillar-card">
-              <div class="pillar-icon">✨</div>
-              <h3>Pós sem 'crash'</h3>
-              <p>Descida suave e natural</p>
-            </div>
+        <div class="sensorial-card hover-card">
+          <div class="sensorial-icon">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 24 Q24 12 36 24 Q24 36 12 24" fill="#FF6B35" opacity="0.3"/>
+              <path d="M12 24 Q24 12 36 24" stroke="#FF6B35" stroke-width="2" fill="none"/>
+              <path d="M12 24 Q24 36 36 24" stroke="#FF6B35" stroke-width="2" fill="none"/>
+              <circle cx="24" cy="24" r="3" fill="#FF6B35"/>
+            </svg>
           </div>
+          <h3>Sabor Premium</h3>
+          <p>Açaí, citrus e berry em harmonia perfeita</p>
+        </div>
+        
+        <div class="sensorial-card hover-card">
+          <div class="sensorial-icon">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="8" y="20" width="32" height="8" rx="4" fill="#FF6B35" opacity="0.3"/>
+              <rect x="8" y="20" width="24" height="8" rx="4" fill="#FF6B35"/>
+              <circle cx="32" cy="24" r="2" fill="#FF6B35"/>
+              <path d="M36 24 L42 18 M36 24 L42 30 M36 24 L42 24" stroke="#FF6B35" stroke-width="2"/>
+            </svg>
+          </div>
+          <h3>5h de Energia</h3>
+          <p>Duração prolongada sem crash energético</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- [5] INGREDIENTES INTELIGENTES - "Nutracêutica com propósito" -->
+  <!-- [5] INGREDIENTES - "Ciência em cada bolha" -->
   <section class="ingredients-section">
     <div class="container">
-      <h2 class="section-title">Nutracêutica com propósito</h2>
+      <h2 class="ingredients-headline">
+        Ciência em cada <span class="bubble-text">bolha</span>
+      </h2>
       
       <div class="ingredients-grid">
-        <div class="ingredient-card">
-          <div class="ingredient-icon">🦁</div>
-          <h3>Lion's Mane</h3>
-          <p>Foco e clareza mental</p>
+        <div class="ingredient-card hover-card">
+          <div class="ingredient-icon">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="20" cy="20" r="16" stroke="#FF6B35" stroke-width="2" fill="none"/>
+              <circle cx="20" cy="20" r="8" fill="#FF6B35" opacity="0.2"/>
+              <path d="M20 12 L20 28 M12 20 L28 20" stroke="#FF6B35" stroke-width="2"/>
+              <circle cx="20" cy="20" r="3" fill="#FF6B35"/>
+            </svg>
+          </div>
+          <h3>Cafeína Natural</h3>
+          <p>100mg de energia limpa e sustentada</p>
         </div>
-        <div class="ingredient-card">
-          <div class="ingredient-icon">🍄</div>
-          <h3>Cordyceps</h3>
-          <p>Vitalidade e oxigenação</p>
+        
+        <div class="ingredient-card hover-card">
+          <div class="ingredient-icon">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8 20 Q20 8 32 20 Q20 32 8 20" stroke="#FF6B35" stroke-width="2" fill="none"/>
+              <path d="M12 20 Q20 12 28 20 Q20 28 12 20" fill="#FF6B35" opacity="0.3"/>
+              <circle cx="20" cy="20" r="2" fill="#FF6B35"/>
+            </svg>
+          </div>
+          <h3>L-Teanina</h3>
+          <p>Foco sem ansiedade, clareza mental</p>
         </div>
-        <div class="ingredient-card">
-          <div class="ingredient-icon">☕</div>
-          <h3>Cafeína + L-teanina</h3>
-          <p>Energia estável, menos ansiedade</p>
+        
+        <div class="ingredient-card hover-card">
+          <div class="ingredient-icon">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <polygon points="20,4 28,16 20,28 12,16" stroke="#FF6B35" stroke-width="2" fill="none"/>
+              <polygon points="20,8 24,16 20,24 16,16" fill="#FF6B35" opacity="0.3"/>
+              <circle cx="20" cy="16" r="2" fill="#FF6B35"/>
+            </svg>
+          </div>
+          <h3>Vitaminas B</h3>
+          <p>Metabolismo energético otimizado</p>
         </div>
-        <div class="ingredient-card">
-          <div class="ingredient-icon">⚡</div>
-          <h3>Taurina</h3>
-          <p>Suporte ao desempenho</p>
-        </div>
-        <div class="ingredient-card">
-          <div class="ingredient-icon">🧬</div>
-          <h3>Complexo B</h3>
-          <p>Metabolismo energético</p>
-        </div>
-        <div class="ingredient-card">
-          <div class="ingredient-icon">💎</div>
-          <h3>Magnésio</h3>
-          <p>Contração muscular e recuperação</p>
+        
+        <div class="ingredient-card hover-card">
+          <div class="ingredient-icon">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="20" cy="20" r="12" stroke="#FF6B35" stroke-width="2" fill="none"/>
+              <circle cx="16" cy="16" r="3" fill="#FF6B35" opacity="0.4"/>
+              <circle cx="24" cy="16" r="3" fill="#FF6B35" opacity="0.4"/>
+              <circle cx="20" cy="24" r="3" fill="#FF6B35" opacity="0.4"/>
+              <circle cx="20" cy="20" r="1" fill="#FF6B35"/>
+            </svg>
+          </div>
+          <h3>Eletrólitos</h3>
+          <p>Hidratação e performance muscular</p>
         </div>
       </div>
       
@@ -246,9 +296,9 @@
     <div class="container">
       <div class="product-content">
         <div class="product-visual">
-          <div class="translucent-jar">
+          <div class="translucent-jar" role="img" aria-label="Mockup do pote translúcido premium da Angie & Paige contendo bubbles coloridas de energia nos sabores açaí, citrus e berry">
             <div class="jar-body">
-              <div class="colored-bubbles">
+              <div class="colored-bubbles" aria-hidden="true">
                 <div class="bubble-flavor acai"></div>
                 <div class="bubble-flavor citrus"></div>
                 <div class="bubble-flavor berry"></div>
@@ -370,7 +420,7 @@
       <h2 class="section-title">Perguntas frequentes</h2>
       
       <div class="faq-grid">
-        <div class="faq-item">
+        <div class="faq-item hover-card">
           <h4>Vai me dar tremedeira?</h4>
           <p>Fórmula pensada para energia estável e foco. Sensibilidade é individual.</p>
         </div>
@@ -382,13 +432,32 @@
           <h4>Posso tomar sem treinar?</h4>
           <p>Produto indicado para atividade física e foco cognitivo.</p>
         </div>
-        <div class="faq-item">
+        <div class="faq-item hover-card">
           <h4>Tem açúcar?</h4>
           <p>Ver tabela nutricional. Mantemos perfil clean.</p>
         </div>
-        <div class="faq-item">
+        <div class="faq-item hover-card">
           <h4>É vegano?</h4>
           <p>Depende do sabor. Verifique o rótulo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- [9.5] GARANTIA -->
+  <section class="guarantee-section">
+    <div class="container">
+      <div class="guarantee-content">
+        <div class="guarantee-icon">🛡️</div>
+        <h2 class="guarantee-title">Satisfação em 7 dias</h2>
+        <p class="guarantee-text">
+          Não curtiu? Devolvemos 100% do seu dinheiro.<br>
+          <small>*Consulte termos e condições no site</small>
+        </p>
+        <div class="guarantee-badges">
+          <span class="badge">Compra Segura</span>
+          <span class="badge">Entrega Garantida</span>
+          <span class="badge">Suporte Premium</span>
         </div>
       </div>
     </div>
@@ -941,131 +1010,72 @@
 .sensorial-section {
   padding: 120px 0;
   background: linear-gradient(135deg, rgba(255, 145, 77, 0.03) 0%, transparent 50%);
-}
-
-.sensorial-content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 80px;
-  align-items: center;
-}
-
-.mouth-artistic {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 400px;
   position: relative;
-}
-
-.bubble-on-tongue {
-  position: relative;
-  width: 250px;
-  height: 150px;
-  background: 
-    radial-gradient(ellipse at center, rgba(255, 106, 0, 0.2) 0%, transparent 60%);
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.tongue-glow {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(ellipse, rgba(255, 106, 0, 0.1) 0%, transparent 70%);
-  border-radius: 50%;
-  animation: tongueGlow 3s ease-in-out infinite;
-}
-
-@keyframes tongueGlow {
-  0%, 100% { opacity: 0.5; transform: scale(1); }
-  50% { opacity: 1; transform: scale(1.1); }
-}
-
-.bubble-dissolving {
-  width: 40px;
-  height: 40px;
-  background: 
-    radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.8) 0%, transparent 40%),
-    radial-gradient(circle, rgba(255, 106, 0, 0.9) 0%, rgba(255, 145, 77, 0.7) 100%);
-  border-radius: 50%;
-  animation: bubbleDissolve 4s ease-in-out infinite;
-}
-
-@keyframes bubbleDissolve {
-  0%, 60% { 
-    transform: scale(1); 
-    opacity: 1; 
-  }
-  80% { 
-    transform: scale(1.5); 
-    opacity: 0.3; 
-  }
-  100% { 
-    transform: scale(0.5); 
-    opacity: 0; 
-  }
 }
 
 .sensorial-headline {
+  text-align: center;
   font-size: 3rem;
   font-weight: 700;
   line-height: 1.2;
-  margin-bottom: 40px;
+  margin-bottom: 60px;
+  color: #F5F6F8;
 }
 
-.experience-text {
+.explode-text {
   color: #FF6A00;
-  font-size: 1.5rem;
-  font-weight: 500;
 }
 
-.pillars-grid {
+.sensorial-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 24px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
-.pillar-card {
-  padding: 24px;
+.sensorial-card {
+  text-align: center;
+  padding: 40px 24px;
   background: rgba(17, 19, 24, 0.6);
-  border-radius: 16px;
+  border-radius: 20px;
   border: 1px solid rgba(255, 106, 0, 0.1);
   transition: all 0.3s ease;
 }
 
-.pillar-card:hover {
-  transform: translateY(-5px);
+.sensorial-card:hover {
+  transform: translateY(-8px);
   border-color: rgba(255, 106, 0, 0.3);
   background: rgba(17, 19, 24, 0.8);
 }
 
-.pillar-icon {
-  font-size: 2rem;
-  margin-bottom: 12px;
+.sensorial-icon {
+  margin-bottom: 24px;
+  display: flex;
+  justify-content: center;
 }
 
-.pillar-card h3 {
-  font-size: 1.1rem;
+.sensorial-card h3 {
+  font-size: 1.3rem;
   font-weight: 600;
-  margin-bottom: 8px;
+  margin-bottom: 12px;
   color: #F5F6F8;
 }
 
-.pillar-card p {
-  font-size: 0.9rem;
+.sensorial-card p {
+  font-size: 1rem;
   color: #9AA0A6;
+  line-height: 1.5;
 }
 
 /* [5] INGREDIENTS SECTION */
 .ingredients-section {
   padding: 120px 0;
   background: #111318;
+  position: relative;
 }
 
-.section-title {
+.ingredients-headline {
   text-align: center;
   font-size: 2.5rem;
   font-weight: 700;
@@ -1073,11 +1083,18 @@
   color: #F5F6F8;
 }
 
+.bubble-text {
+  color: #FF6A00;
+}
+
 .ingredients-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 30px;
   margin-bottom: 40px;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .ingredient-card {
@@ -1096,8 +1113,9 @@
 }
 
 .ingredient-icon {
-  font-size: 2.5rem;
-  margin-bottom: 16px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
 }
 
 .ingredient-card h3 {
@@ -1117,7 +1135,7 @@
   font-size: 1rem;
   color: #9AA0A6;
   max-width: 600px;
-  margin: 0 auto;
+  margin: 40px auto 0;
   line-height: 1.6;
 }
 
@@ -1517,6 +1535,475 @@
   color: #FF6A00;
 }
 
+/* STICKY BAR */
+.sticky-conversion-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(135deg, #FF6A00 0%, #FF914D 100%);
+  padding: 16px;
+  z-index: 1000;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.sticky-conversion-bar.visible {
+  transform: translateY(0);
+}
+
+.sticky-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.sticky-text {
+  color: #F5F6F8;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.sticky-cta {
+  background: rgba(255, 255, 255, 0.2);
+  color: #F5F6F8;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.sticky-cta:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.05);
+}
+
+/* EXIT INTENT MODAL */
+.exit-intent-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.exit-intent-modal.visible {
+  display: flex;
+}
+
+.modal-backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(5px);
+}
+
+.modal-content {
+  position: relative;
+  background: linear-gradient(135deg, #111318 0%, #1a1d24 100%);
+  border: 2px solid rgba(255, 106, 0, 0.3);
+  border-radius: 20px;
+  padding: 40px;
+  max-width: 500px;
+  width: 90%;
+  text-align: center;
+  animation: modalSlideIn 0.4s ease-out;
+}
+
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8) translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.modal-close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background: none;
+  border: none;
+  color: #9AA0A6;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.modal-close:hover {
+  color: #FF6A00;
+}
+
+.modal-content h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: #F5F6F8;
+}
+
+.modal-content p {
+  font-size: 1.2rem;
+  color: #9AA0A6;
+  margin-bottom: 24px;
+}
+
+.email-capture {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.email-capture input {
+  flex: 1;
+  padding: 14px 18px;
+  border: 2px solid rgba(255, 106, 0, 0.3);
+  border-radius: 25px;
+  background: rgba(17, 19, 24, 0.8);
+  color: #F5F6F8;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.email-capture input:focus {
+  border-color: #FF6A00;
+}
+
+.email-capture input::placeholder {
+  color: #9AA0A6;
+}
+
+.email-capture button {
+  background: linear-gradient(135deg, #FF6A00 0%, #FF914D 100%);
+  color: #F5F6F8;
+  border: none;
+  padding: 14px 24px;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.email-capture button:hover {
+  transform: scale(1.05);
+}
+
+.modal-content small {
+  color: #9AA0A6;
+  font-size: 0.9rem;
+}
+
+/* ACCESSIBILITY */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* PARALLAX */
+ .parallax-element {
+   transition: transform 0.1s ease-out;
+ }
+
+ /* HOVER EFFECTS */
+ .hover-card {
+   transition: all 0.3s ease;
+   cursor: pointer;
+ }
+
+ .hover-card:hover {
+   transform: translateY(-5px) scale(1.02);
+   box-shadow: 0 10px 30px rgba(255, 106, 0, 0.2);
+ }
+
+ .cta-primary, .cta-secondary {
+   position: relative;
+   overflow: hidden;
+   transition: all 0.3s ease;
+ }
+
+ .cta-primary:hover {
+   transform: translateY(-2px);
+   box-shadow: 0 8px 25px rgba(255, 106, 0, 0.4);
+ }
+
+ .cta-primary:focus {
+   outline: 3px solid rgba(255, 106, 0, 0.5);
+   outline-offset: 2px;
+ }
+
+ .cta-secondary:focus {
+   outline: 3px solid rgba(255, 106, 0, 0.5);
+   outline-offset: 2px;
+ }
+
+ /* GUARANTEE SECTION */
+ .guarantee-section {
+   padding: 80px 0;
+   background: linear-gradient(135deg, #111318 0%, #1a1d24 100%);
+   border-top: 1px solid rgba(255, 106, 0, 0.1);
+   border-bottom: 1px solid rgba(255, 106, 0, 0.1);
+ }
+
+ .guarantee-content {
+   text-align: center;
+   max-width: 600px;
+   margin: 0 auto;
+ }
+
+ .guarantee-icon {
+   font-size: 4rem;
+   margin-bottom: 24px;
+   filter: drop-shadow(0 0 20px rgba(255, 106, 0, 0.3));
+ }
+
+ .guarantee-title {
+   font-size: 2.5rem;
+   font-weight: 700;
+   color: #F5F6F8;
+   margin-bottom: 20px;
+ }
+
+ .guarantee-text {
+   font-size: 1.2rem;
+   color: #9AA0A6;
+   margin-bottom: 32px;
+   line-height: 1.6;
+ }
+
+ .guarantee-text small {
+   font-size: 0.9rem;
+   color: #6B7280;
+ }
+
+ .guarantee-badges {
+   display: flex;
+   justify-content: center;
+   gap: 16px;
+   flex-wrap: wrap;
+ }
+
+ .badge {
+   background: rgba(255, 106, 0, 0.1);
+   border: 1px solid rgba(255, 106, 0, 0.3);
+   color: #FF914D;
+   padding: 8px 16px;
+   border-radius: 20px;
+   font-size: 0.9rem;
+   font-weight: 500;
+ }
+
+ /* IMPROVED TYPOGRAPHY & ACCESSIBILITY */
+ body {
+   font-size: 18px;
+   line-height: 1.6;
+ }
+
+ h1 {
+   font-size: clamp(2.5rem, 5vw, 4rem);
+   line-height: 1.2;
+ }
+
+ h2 {
+   font-size: clamp(2rem, 4vw, 3rem);
+   line-height: 1.3;
+ }
+
+ h3 {
+   font-size: clamp(1.5rem, 3vw, 2rem);
+   line-height: 1.4;
+ }
+
+ h4 {
+   font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+   line-height: 1.4;
+ }
+
+ p {
+   font-size: clamp(1rem, 2vw, 1.1rem);
+   line-height: 1.6;
+ }
+
+ /* CONTRAST IMPROVEMENTS */
+ .hero-subheadline {
+   color: #D1D5DB;
+ }
+
+ .section-description {
+   color: #D1D5DB;
+ }
+
+/* Ícones SVG com animações */
+.sensorial-icon svg,
+.ingredient-icon svg {
+  transition: all 0.3s ease;
+}
+
+.sensorial-card:hover .sensorial-icon svg,
+.ingredient-card:hover .ingredient-icon svg {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 20px rgba(255, 107, 53, 0.4));
+}
+
+.sensorial-icon svg path,
+.sensorial-icon svg circle,
+.ingredient-icon svg path,
+.ingredient-icon svg circle,
+.ingredient-icon svg polygon {
+  transition: all 0.3s ease;
+}
+
+.sensorial-card:hover .sensorial-icon svg path,
+.sensorial-card:hover .sensorial-icon svg circle,
+.ingredient-card:hover .ingredient-icon svg path,
+.ingredient-card:hover .ingredient-icon svg circle,
+.ingredient-card:hover .ingredient-icon svg polygon {
+  stroke: #FFB800;
+  fill: #FFB800;
+}
+
+.sensorial-card:hover .sensorial-icon svg [fill="#FF6B35"] {
+  fill: #FFB800;
+}
+
+.ingredient-card:hover .ingredient-icon svg [fill="#FF6B35"] {
+  fill: #FFB800;
+}
+
+/* Backgrounds com glow melhorados */
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 30%, rgba(255, 107, 53, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 80% 70%, rgba(255, 184, 0, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 50% 50%, rgba(255, 107, 53, 0.05) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.sensorial-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 30% 20%, rgba(255, 107, 53, 0.1) 0%, transparent 60%),
+    radial-gradient(circle at 70% 80%, rgba(255, 184, 0, 0.08) 0%, transparent 60%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.ingredients-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 60% 30%, rgba(255, 107, 53, 0.12) 0%, transparent 50%),
+    radial-gradient(circle at 40% 70%, rgba(255, 184, 0, 0.08) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.product-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 50% 50%, rgba(255, 107, 53, 0.08) 0%, transparent 70%),
+    radial-gradient(circle at 20% 80%, rgba(255, 184, 0, 0.06) 0%, transparent 60%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Posicionamento relativo para as seções */
+.hero-section,
+.sensorial-section,
+.ingredients-section,
+.product-section {
+  position: relative;
+}
+
+.hero-section > .container,
+.sensorial-section > .container,
+.ingredients-section > .container,
+.product-section > .container {
+  position: relative;
+  z-index: 2;
+}
+
+ /* REDUCED MOTION */
+ @media (prefers-reduced-motion: reduce) {
+   * {
+     animation-duration: 0.01ms !important;
+     animation-iteration-count: 1 !important;
+     transition-duration: 0.01ms !important;
+   }
+   
+   .parallax-element {
+     transform: none !important;
+   }
+   
+   .floating-particles {
+     display: none;
+   }
+ }
+
+ /* WIPE TRANSITIONS */
+ .section-transition {
+   position: relative;
+   overflow: hidden;
+ }
+
+ .section-transition::before {
+   content: '';
+   position: absolute;
+   top: 0;
+   left: -100%;
+   width: 100%;
+   height: 100%;
+   background: linear-gradient(90deg, transparent, rgba(255, 106, 0, 0.1), transparent);
+   transition: left 0.6s ease;
+   z-index: 1;
+ }
+
+ .section-transition.in-view::before {
+   left: 100%;
+ }
+
 /* RESPONSIVE DESIGN */
 @media (max-width: 768px) {
   .hero-content {
@@ -1543,9 +2030,9 @@
     gap: 40px;
   }
   
-  .sensorial-content {
+  .sensorial-grid {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 30px;
   }
   
   .ingredients-grid {
@@ -1577,5 +2064,187 @@
     flex-wrap: wrap;
     gap: 20px;
   }
+  
+  .sticky-content {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+  
+  .email-capture {
+    flex-direction: column;
+  }
+  
+  .modal-content {
+    padding: 30px 20px;
+  }
 }
-</style>
+ </style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // STICKY BAR
+  const stickyBar = document.getElementById('stickyBar');
+  let hasShownSticky = false;
+  
+  function handleScroll() {
+    const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+    
+    if (scrollPercent > 25 && !hasShownSticky) {
+      stickyBar.classList.add('visible');
+      hasShownSticky = true;
+    }
+  }
+  
+  window.addEventListener('scroll', handleScroll);
+  
+  // EXIT INTENT MODAL
+  const exitModal = document.getElementById('exitModal');
+  let hasShownExitIntent = false;
+  
+  function showExitIntent() {
+    if (!hasShownExitIntent) {
+      exitModal.classList.add('visible');
+      exitModal.setAttribute('aria-hidden', 'false');
+      hasShownExitIntent = true;
+    }
+  }
+  
+  document.addEventListener('mouseleave', function(e) {
+    if (e.clientY <= 0) {
+      showExitIntent();
+    }
+  });
+  
+  // Close modal
+  const modalClose = document.querySelector('.modal-close');
+  const modalBackdrop = document.querySelector('.modal-backdrop');
+  
+  function closeModal() {
+    exitModal.classList.remove('visible');
+    exitModal.setAttribute('aria-hidden', 'true');
+  }
+  
+  modalClose?.addEventListener('click', closeModal);
+  modalBackdrop?.addEventListener('click', closeModal);
+  
+  // Email capture
+  const emailForm = document.querySelector('.email-capture');
+  emailForm?.addEventListener('submit', function(e) {
+    e.preventDefault();
+    const email = this.querySelector('input[type="email"]').value;
+    console.log('Email captured:', email);
+    // Aqui você integraria com seu sistema de email marketing
+    closeModal();
+    alert('Desconto enviado para seu e-mail! 🎉');
+  });
+  
+  // PARALLAX
+  function updateParallax() {
+    const parallaxElements = document.querySelectorAll('.parallax-element');
+    const scrolled = window.pageYOffset;
+    
+    parallaxElements.forEach(element => {
+      const speed = element.dataset.speed || 0.5;
+      const yPos = -(scrolled * speed);
+      element.style.transform = `translateY(${yPos}px)`;
+    });
+  }
+  
+  window.addEventListener('scroll', updateParallax);
+  
+  // SECTION TRANSITIONS
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  };
+  
+  const sectionObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in-view');
+      }
+    });
+  }, observerOptions);
+  
+  document.querySelectorAll('.section-transition').forEach(section => {
+    sectionObserver.observe(section);
+  });
+  
+  // SMOOTH SCROLL FOR ANCHOR LINKS
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        target.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
+    });
+  });
+  
+  // KEYBOARD NAVIGATION
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && exitModal.classList.contains('visible')) {
+      closeModal();
+    }
+  });
+  
+  // FOCUS MANAGEMENT
+  const focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
+  
+  function trapFocus(element) {
+    const focusableContent = element.querySelectorAll(focusableElements);
+    const firstFocusableElement = focusableContent[0];
+    const lastFocusableElement = focusableContent[focusableContent.length - 1];
+    
+    element.addEventListener('keydown', function(e) {
+      if (e.key === 'Tab') {
+        if (e.shiftKey) {
+          if (document.activeElement === firstFocusableElement) {
+            lastFocusableElement.focus();
+            e.preventDefault();
+          }
+        } else {
+          if (document.activeElement === lastFocusableElement) {
+            firstFocusableElement.focus();
+            e.preventDefault();
+          }
+        }
+      }
+    });
+  }
+  
+  // Apply focus trap to modal
+  if (exitModal) {
+    trapFocus(exitModal);
+  }
+});
+
+// ANALYTICS PLACEHOLDERS
+function trackEvent(eventName, properties = {}) {
+  // Google Analytics 4
+  if (typeof gtag !== 'undefined') {
+    gtag('event', eventName, properties);
+  }
+  
+  // Meta Pixel
+  if (typeof fbq !== 'undefined') {
+    fbq('track', eventName, properties);
+  }
+  
+  console.log('Event tracked:', eventName, properties);
+}
+
+// Track CTA clicks
+document.addEventListener('click', function(e) {
+  if (e.target.matches('.cta-primary, .sticky-cta')) {
+    trackEvent('cta_click', {
+      button_text: e.target.textContent.trim(),
+      page_location: window.location.href
+    });
+  }
+});
+</script>
