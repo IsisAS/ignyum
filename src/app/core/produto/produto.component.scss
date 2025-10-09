@@ -532,11 +532,12 @@
     }
 
     .buy-button {
-      padding: 6px 12px;
-      font-size: 0.65rem;
-      border-radius: 14px;
-      margin-top: 8px;
-      letter-spacing: 0.4px;
+      padding: 10px 20px;
+      font-size: 0.75rem;
+      border-radius: 16px;
+      margin-top: 12px;
+      letter-spacing: 0.5px;
+      min-height: 44px;
     }
 
     .carousel-navigation {
@@ -606,11 +607,13 @@
     }
 
     .buy-button {
-      padding: 5px 10px;
-      font-size: 0.6rem;
-      border-radius: 12px;
-      margin-top: 6px;
-      letter-spacing: 0.2px;
+      padding: 12px 24px;
+      font-size: 0.8rem;
+      border-radius: 18px;
+      margin-top: 15px;
+      letter-spacing: 0.6px;
+      min-height: 48px;
+      font-weight: 600;
     }
 
     .carousel-navigation {

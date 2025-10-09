@@ -669,4 +669,52 @@
     width: 350px;
     height: 350px;
   }
+  
+  .cta-sensorial {
+    padding: 16px 32px;
+    font-size: 1rem;
+    min-height: 48px;
+    letter-spacing: 0.8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .experiencia-sensorial-section {
+    padding: 60px 0;
+  }
+  
+  .sensorial-headline {
+    font-size: clamp(1.8rem, 5vw, 2.8rem);
+  }
+  
+  .ingredientes-title {
+    font-size: 2rem;
+  }
+  
+  .ingrediente-item {
+    padding: 14px;
+    gap: 14px;
+  }
+  
+  .ingrediente-icon {
+    width: 36px;
+    height: 36px;
+  }
+  
+  .ingrediente-info h4 {
+    font-size: 0.9rem;
+  }
+  
+  .ingrediente-info p {
+    font-size: 0.8rem;
+  }
+  
+  .cta-sensorial {
+    padding: 18px 36px;
+    font-size: 1.1rem;
+    min-height: 52px;
+    letter-spacing: 0.9px;
+    width: 100%;
+    max-width: 280px;
+  }
 }
