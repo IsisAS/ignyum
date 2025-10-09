@@ -1,0 +1,94 @@
+<section class="faq-section">
+  <div class="container">
+    <!-- Header Section -->
+    <div class="faq-header">
+      <div class="faq-badge">
+        <span class="badge-icon">❓</span>
+        <span class="badge-text">FAQ</span>
+      </div>
+      <h2 class="section-title">
+        Perguntas <span class="highlight">Frequentes</span>
+      </h2>
+      <p class="section-subtitle">
+        Tire suas dúvidas sobre nossos produtos e descubra como eles podem transformar sua energia
+      </p>
+      
+      <!-- Control Buttons -->
+      <div class="faq-controls">
+        <button class="control-btn" (click)="openAllFAQs()">
+          <span class="btn-icon">📖</span>
+          Expandir Todas
+        </button>
+        <button class="control-btn" (click)="closeAllFAQs()">
+          <span class="btn-icon">📋</span>
+          Recolher Todas
+        </button>
+      </div>
+    </div>
+
+    <!-- FAQ Grid -->
+    <div class="faq-grid">
+      <div 
+        *ngFor="let faq of faqItems; trackBy: trackByFn" 
+        class="faq-item"
+        [class.active]="faq.isOpen"
+        [attr.data-category]="faq.category"
+      >
+        <div class="faq-question" (click)="toggleFAQ(faq.id)">
+          <div class="question-content">
+            <div class="question-icon">
+              <svg class="icon-plus" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <line x1="12" y1="5" x2="12" y2="19"></line>
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+              </svg>
+              <svg class="icon-minus" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+              </svg>
+            </div>
+            <h4 class="question-text">{{ faq.question }}</h4>
+          </div>
+          <div class="question-arrow">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <polyline points="6,9 12,15 18,9"></polyline>
+            </svg>
+          </div>
+        </div>
+        
+        <div class="faq-answer" [class.expanded]="faq.isOpen">
+          <div class="answer-content">
+            <div class="answer-icon">💡</div>
+            <p class="answer-text">{{ faq.answer }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom CTA -->
+    <div class="faq-bottom-cta">
+      <div class="cta-content">
+        <h3 class="cta-title">Ainda tem dúvidas?</h3>
+        <p class="cta-subtitle">Nossa equipe está pronta para ajudar você</p>
+        <div class="cta-buttons">
+          <button class="cta-primary">
+            <span class="btn-icon">💬</span>
+            Falar com Especialista
+          </button>
+          <button class="cta-secondary">
+            <span class="btn-icon">📧</span>
+            Enviar Pergunta
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Background Elements -->
+  <div class="faq-background">
+    <div class="bg-gradient"></div>
+    <div class="floating-elements">
+      <div class="floating-element element-1"></div>
+      <div class="floating-element element-2"></div>
+      <div class="floating-element element-3"></div>
+    </div>
+  </div>
+</section>
