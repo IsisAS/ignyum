@@ -222,13 +222,13 @@
     }
 
     h3 {
-      font-size: 1.6rem;
-      font-weight: 800;
+      font-size: 1.1rem;
+      font-weight: 600;
       color: white;
-      margin: 0 0 10px 0;
-      text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+      margin: 0 0 8px 0;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
       line-height: 1.2;
-      letter-spacing: -0.5px;
+      letter-spacing: 0.3px;
     }
 
     .product-description {
@@ -251,17 +251,17 @@
     margin: 20px 0;
 
     .produto-image {
-      width: 160px;
-      height: 160px;
+      width: 220px;
+      height: 220px;
       object-fit: contain;
-      filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.4));
+      filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.4));
       transition: all 0.3s ease;
       z-index: 2;
       position: relative;
 
       &:hover {
-        transform: scale(1.1);
-        filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.5));
+        transform: scale(1.08);
+        filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.5));
       }
     }
 
@@ -381,16 +381,16 @@
     background: rgba(255, 255, 255, 0.1);
     color: #ffffff;
     border: 2px solid rgba(255, 255, 255, 0.3);
-    padding: 12px 24px;
-    border-radius: 25px;
-    font-weight: 700;
-    font-size: 0.9rem;
+    padding: 8px 16px;
+    border-radius: 18px;
+    font-weight: 500;
+    font-size: 0.75rem;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 0.8px;
     cursor: pointer;
     transition: all 0.3s ease;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    margin-top: 15px;
+    margin-top: 12px;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
 
