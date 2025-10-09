@@ -228,27 +228,6 @@
   transform: translateX(4px);
 }
 
-/* [2] INSIGHT SECTION */
-.insight-section {
-  padding: 120px 0;
-  background: linear-gradient(180deg, #0B0B0F 0%, #111318 100%);
-}
-
-.insight-content {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 60px;
-  align-items: center;
-}
-
-.insight-headline {
-  font-size: clamp(2.5rem, 6vw, 4rem);
-  font-weight: 700;
-  line-height: 1.2;
-  margin-bottom: 2rem;
-  color: #F5F6F8;
-}
-
 .highlight {
   background: linear-gradient(135deg, #FF6B35 0%, #FF8A00 100%);
   -webkit-background-clip: text;
