@@ -2,7 +2,7 @@
   <div class="header-container">
     <!-- Logo Section -->
     <div class="logo-section">
-      <a href="#" class="logo-link" (click)="scrollToSection('hero')">
+      <a class="logo-link" (click)="scrollToSection('hero'); $event.preventDefault()">
         <img src="assets/image/logo.svg" alt="IGNYUM" class="logo-image">
       </a>
     </div>
@@ -11,31 +11,30 @@
     <nav class="nav-menu" [class.menu-open]="isMenuOpen">
       <ul class="nav-list">
         <li class="nav-item">
-          <a href="#" class="nav-link" (click)="scrollToSection('problema')">
+          <a class="nav-link" (click)="scrollToSection('problema'); $event.preventDefault()">
             Problema
           </a>
         </li>
         <li class="nav-item">
-          <a href="#" class="nav-link" (click)="scrollToSection('solucao')">
+          <a class="nav-link" (click)="scrollToSection('solucao'); $event.preventDefault()">
             Solução
           </a>
         </li>
         <li class="nav-item">
-          <a href="#" class="nav-link" (click)="scrollToSection('experiencia')">
+          <a class="nav-link" (click)="scrollToSection('experiencia'); $event.preventDefault()">
             Experiência
           </a>
         </li>
         <li class="nav-item">
-          <a href="#" class="nav-link" (click)="scrollToSection('depoimentos')">
+          <a class="nav-link" (click)="scrollToSection('depoimentos'); $event.preventDefault()">
             Depoimentos
           </a>
         </li>
         <li class="nav-item mobile-cart-item">
           <button class="mobile-cart-button" (click)="scrollToSection('comprar')">
-            <svg class="mobile-cart-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M3 3H5L5.4 5M7 13H17L21 5H5.4M7 13L5.4 5M7 13L4.7 15.3C4.3 15.7 4.6 16.5 5.1 16.5H17M17 13V17C17 18.1 16.1 19 15 19H9C7.9 19 7 18.1 7 17V13M9 22C9.6 22 10 21.6 10 21S9.6 20 9 20 8 20.4 8 21 8.4 22 9 22ZM20 22C20.6 22 21 21.6 21 21S20.6 20 20 20 19 20.4 19 21 19.4 22 20 22Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <svg class="mobile-cart-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M3 3H5L5.4 5M7 13H17L21 5H5.4M7 13L5.4 5M7 13L4.7 15.3C4.3 15.7 4.6 16.5 5.1 16.5H17M17 13V17C17 18.1 16.1 19 15 19H9C7.9 19 7 18.1 7 17V13M9 22C9.6 22 10 21.6 10 21S9.6 20 9 20 8 20.4 8 21 8.4 22 9 22ZM20 22C20.6 22 21 21.6 21 21S20.6 20 20 20 19 20.4 19 21 19.4 22 20 22Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
-            <span class="mobile-cart-text">Comprar Agora</span>
           </button>
         </li>
       </ul>
