@@ -1,0 +1,672 @@
+// EXPERIÊNCIA SENSORIAL - Arquétipo Premium & Sensual
+.experiencia-sensorial-section {
+  position: relative;
+  padding: 120px 0;
+  background: linear-gradient(135deg, 
+    rgba(0, 0, 0, 0.95) 0%, 
+    rgba(20, 20, 20, 0.98) 50%, 
+    rgba(0, 0, 0, 0.95) 100%);
+  overflow: hidden;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(ellipse at center, 
+      rgba(255, 107, 53, 0.1) 0%, 
+      transparent 70%);
+    pointer-events: none;
+  }
+
+  .container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    position: relative;
+    z-index: 2;
+  }
+}
+
+// TÍTULO PRINCIPAL COM EFEITO EXPLOSIVO
+.headline-container {
+  text-align: center;
+  margin-bottom: 80px;
+  position: relative;
+}
+
+.sensorial-headline {
+  font-size: clamp(3rem, 8vw, 6rem);
+  font-weight: 300;
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  
+  .explode-text {
+    display: inline-block;
+    background: linear-gradient(135deg, #FFD700 0%, #FF8C42 50%, #FF6B35 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 700;
+    position: relative;
+    animation: textExplosion 3s ease-in-out infinite;
+    
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, 
+        rgba(255, 215, 0, 0.3) 0%, 
+        rgba(255, 140, 66, 0.2) 30%, 
+        transparent 70%);
+      transform: translate(-50%, -50%);
+      animation: explosionGlow 3s ease-in-out infinite;
+      pointer-events: none;
+      z-index: -1;
+    }
+  }
+}
+
+// PARTÍCULAS DE EXPLOSÃO
+.explosion-particles {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 300px;
+  pointer-events: none;
+  
+  .particle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: linear-gradient(45deg, #FFD700, #FF6B35);
+    border-radius: 50%;
+    animation: particleExplosion 4s ease-out infinite;
+    
+    &.p1 { 
+      top: 20%; left: 30%; 
+      animation-delay: 0s;
+      animation-duration: 3.5s;
+    }
+    &.p2 { 
+      top: 40%; right: 20%; 
+      animation-delay: 0.5s;
+      animation-duration: 4s;
+    }
+    &.p3 { 
+      bottom: 30%; left: 25%; 
+      animation-delay: 1s;
+      animation-duration: 3.8s;
+    }
+    &.p4 { 
+      bottom: 20%; right: 35%; 
+      animation-delay: 1.5s;
+      animation-duration: 4.2s;
+    }
+    &.p5 { 
+      top: 60%; left: 50%; 
+      animation-delay: 2s;
+      animation-duration: 3.6s;
+    }
+    &.p6 { 
+      top: 10%; right: 45%; 
+      animation-delay: 2.5s;
+      animation-duration: 4.1s;
+    }
+  }
+}
+
+// CONTEÚDO PRINCIPAL
+.sensorial-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+  
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr;
+    gap: 60px;
+    text-align: center;
+  }
+}
+
+// SHOWCASE DO PRODUTO
+.produto-showcase {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.produto-container {
+  position: relative;
+  max-width: 500px;
+  width: 100%;
+}
+
+.produto-image-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  .produto-image {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    filter: drop-shadow(0 20px 40px rgba(255, 107, 53, 0.3));
+    animation: productFloat 6s ease-in-out infinite;
+    z-index: 3;
+    position: relative;
+  }
+}
+
+// EFEITOS VISUAIS EXPLOSIVOS
+.energy-explosion {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 600px;
+  pointer-events: none;
+  z-index: 1;
+  
+  .energy-ring {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border: 2px solid;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    animation: energyRingExpansion 4s ease-out infinite;
+    
+    &.ring-1 {
+      width: 200px;
+      height: 200px;
+      border-color: rgba(255, 215, 0, 0.6);
+      animation-delay: 0s;
+    }
+    
+    &.ring-2 {
+      width: 350px;
+      height: 350px;
+      border-color: rgba(255, 140, 66, 0.4);
+      animation-delay: 1s;
+    }
+    
+    &.ring-3 {
+      width: 500px;
+      height: 500px;
+      border-color: rgba(255, 107, 53, 0.3);
+      animation-delay: 2s;
+    }
+  }
+}
+
+// PARTÍCULAS DE ENERGIA
+.energy-particles {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  height: 500px;
+  pointer-events: none;
+  z-index: 2;
+  
+  .energy-particle {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: linear-gradient(45deg, #FFD700, #FF6B35);
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.8);
+    animation: energyParticleOrbit 8s linear infinite;
+    
+    &.ep1 { 
+      top: 10%; left: 50%; 
+      animation-delay: 0s;
+      animation-duration: 6s;
+    }
+    &.ep2 { 
+      top: 25%; right: 15%; 
+      animation-delay: 1s;
+      animation-duration: 7s;
+    }
+    &.ep3 { 
+      top: 50%; right: 5%; 
+      animation-delay: 2s;
+      animation-duration: 8s;
+    }
+    &.ep4 { 
+      bottom: 25%; right: 15%; 
+      animation-delay: 3s;
+      animation-duration: 6.5s;
+    }
+    &.ep5 { 
+      bottom: 10%; left: 50%; 
+      animation-delay: 4s;
+      animation-duration: 7.5s;
+    }
+    &.ep6 { 
+      bottom: 25%; left: 15%; 
+      animation-delay: 5s;
+      animation-duration: 8.2s;
+    }
+    &.ep7 { 
+      top: 50%; left: 5%; 
+      animation-delay: 6s;
+      animation-duration: 6.8s;
+    }
+    &.ep8 { 
+      top: 25%; left: 15%; 
+      animation-delay: 7s;
+      animation-duration: 7.8s;
+    }
+  }
+}
+
+// ONDAS DE CHOQUE
+.shock-waves {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 800px;
+  height: 800px;
+  pointer-events: none;
+  z-index: 0;
+  
+  .shock-wave {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border: 1px solid;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    animation: shockWaveExpansion 5s ease-out infinite;
+    
+    &.wave-1 {
+      border-color: rgba(255, 215, 0, 0.3);
+      animation-delay: 0s;
+    }
+    
+    &.wave-2 {
+      border-color: rgba(255, 140, 66, 0.2);
+      animation-delay: 1.5s;
+    }
+    
+    &.wave-3 {
+      border-color: rgba(255, 107, 53, 0.15);
+      animation-delay: 3s;
+    }
+  }
+}
+
+// BADGE PREMIUM
+.premium-badge {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  background: linear-gradient(135deg, #FFD700 0%, #FF8C42 100%);
+  color: #000;
+  padding: 12px 20px;
+  border-radius: 25px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 8px 25px rgba(255, 215, 0, 0.4);
+  animation: badgePulse 3s ease-in-out infinite;
+  z-index: 4;
+  
+  span {
+    display: block;
+    line-height: 1.2;
+    
+    &:first-child {
+      margin-bottom: 2px;
+    }
+  }
+}
+
+// SHOWCASE DOS INGREDIENTES
+.ingredientes-showcase {
+  padding-left: 40px;
+  
+  @media (max-width: 1024px) {
+    padding-left: 0;
+  }
+}
+
+.ingredientes-header {
+  margin-bottom: 40px;
+}
+
+.ingredientes-title {
+  font-size: 2.5rem;
+  font-weight: 300;
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.2;
+  
+  .subtitle {
+    display: block;
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 400;
+    margin-top: 8px;
+  }
+}
+
+// LISTA DE INGREDIENTES PREMIUM
+.ingredientes-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 50px;
+}
+
+.ingrediente-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  background: linear-gradient(135deg, 
+    rgba(255, 255, 255, 0.05) 0%, 
+    rgba(255, 107, 53, 0.08) 100%);
+  border: 1px solid rgba(255, 107, 53, 0.2);
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, 
+      transparent 0%, 
+      rgba(255, 215, 0, 0.1) 50%, 
+      transparent 100%);
+    transition: left 0.6s ease;
+  }
+  
+  &:hover {
+    transform: translateX(8px);
+    border-color: rgba(255, 215, 0, 0.4);
+    box-shadow: 0 12px 40px rgba(255, 107, 53, 0.2);
+    
+    &::before {
+      left: 100%;
+    }
+    
+    .ingrediente-icon svg {
+      transform: scale(1.1) rotate(5deg);
+    }
+  }
+}
+
+.ingrediente-icon {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, 
+    rgba(255, 215, 0, 0.1) 0%, 
+    rgba(255, 107, 53, 0.1) 100%);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 215, 0, 0.3);
+  
+  svg {
+    transition: transform 0.3s ease;
+  }
+}
+
+.ingrediente-info {
+  flex: 1;
+  
+  h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin: 0 0 4px 0;
+    line-height: 1.3;
+  }
+  
+  p {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0 0 8px 0;
+    line-height: 1.4;
+  }
+  
+  .dosagem {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #FFD700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+}
+
+// CTA SENSORIAL
+.sensorial-cta {
+  text-align: center;
+}
+
+.cta-sensorial {
+  position: relative;
+  background: linear-gradient(135deg, #FF6B35 0%, #FF8C42 50%, #FFD700 100%);
+  color: #000;
+  border: none;
+  padding: 18px 40px;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+  
+  .cta-text {
+    position: relative;
+    z-index: 2;
+  }
+  
+  .cta-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: radial-gradient(circle, 
+      rgba(255, 255, 255, 0.3) 0%, 
+      transparent 70%);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.6s ease;
+    z-index: 1;
+  }
+  
+  &:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 15px 40px rgba(255, 107, 53, 0.4);
+    
+    .cta-glow {
+      width: 200px;
+      height: 200px;
+    }
+  }
+  
+  &:active {
+    transform: translateY(-1px) scale(1.02);
+  }
+}
+
+// ANIMAÇÕES KEYFRAMES
+@keyframes textExplosion {
+  0%, 100% { 
+    transform: scale(1);
+    filter: brightness(1);
+  }
+  50% { 
+    transform: scale(1.05);
+    filter: brightness(1.2);
+  }
+}
+
+@keyframes explosionGlow {
+  0%, 100% { 
+    opacity: 0.3;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% { 
+    opacity: 0.6;
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+}
+
+@keyframes particleExplosion {
+  0% {
+    opacity: 0;
+    transform: scale(0) translate(0, 0);
+  }
+  20% {
+    opacity: 1;
+    transform: scale(1) translate(0, 0);
+  }
+  80% {
+    opacity: 1;
+    transform: scale(1) translate(var(--random-x, 50px), var(--random-y, -30px));
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0) translate(var(--random-x, 50px), var(--random-y, -30px));
+  }
+}
+
+@keyframes productFloat {
+  0%, 100% { 
+    transform: translateY(0px) rotate(0deg);
+  }
+  33% { 
+    transform: translateY(-10px) rotate(1deg);
+  }
+  66% { 
+    transform: translateY(5px) rotate(-1deg);
+  }
+}
+
+@keyframes energyRingExpansion {
+  0% {
+    width: 50px;
+    height: 50px;
+    opacity: 1;
+    border-width: 3px;
+  }
+  100% {
+    width: 600px;
+    height: 600px;
+    opacity: 0;
+    border-width: 1px;
+  }
+}
+
+@keyframes energyParticleOrbit {
+  0% {
+    transform: rotate(0deg) translateX(100px) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(360deg) translateX(100px) rotate(-360deg);
+    opacity: 1;
+  }
+}
+
+@keyframes shockWaveExpansion {
+  0% {
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  70% {
+    opacity: 0.3;
+  }
+  100% {
+    width: 800px;
+    height: 800px;
+    opacity: 0;
+  }
+}
+
+@keyframes badgePulse {
+  0%, 100% { 
+    transform: scale(1);
+    box-shadow: 0 8px 25px rgba(255, 215, 0, 0.4);
+  }
+  50% { 
+    transform: scale(1.05);
+    box-shadow: 0 12px 35px rgba(255, 215, 0, 0.6);
+  }
+}
+
+// RESPONSIVIDADE
+@media (max-width: 768px) {
+  .experiencia-sensorial-section {
+    padding: 80px 0;
+  }
+  
+  .sensorial-headline {
+    font-size: clamp(2rem, 6vw, 3.5rem);
+  }
+  
+  .sensorial-content {
+    gap: 40px;
+  }
+  
+  .ingredientes-showcase {
+    padding-left: 0;
+  }
+  
+  .ingrediente-item {
+    padding: 16px;
+    gap: 16px;
+  }
+  
+  .ingrediente-icon {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .produto-image-wrapper .produto-image {
+    max-width: 300px;
+  }
+  
+  .energy-explosion {
+    width: 400px;
+    height: 400px;
+  }
+  
+  .energy-particles {
+    width: 350px;
+    height: 350px;
+  }
+}
