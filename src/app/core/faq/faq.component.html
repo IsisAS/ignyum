@@ -1,7 +1,7 @@
 <section class="faq-section">
   <div class="container">
     <!-- Header Section -->
-    <div class="faq-header">
+    <div class="faq-header" data-aos="fade-up">
       <div class="faq-badge">
         <span class="badge-icon">❓</span>
         <span class="badge-text">FAQ</span>
@@ -14,7 +14,7 @@
       </p>
       
       <!-- Control Buttons -->
-      <div class="faq-controls">
+      <div class="faq-controls" data-aos="fade-up" data-aos-delay="200">
         <button class="control-btn" (click)="openAllFAQs()">
           <span class="btn-icon">📖</span>
           Expandir Todas
@@ -29,10 +29,12 @@
     <!-- FAQ Grid -->
     <div class="faq-grid">
       <div 
-        *ngFor="let faq of faqItems; trackBy: trackByFn" 
+        *ngFor="let faq of faqItems; trackBy: trackByFn; let i = index" 
         class="faq-item"
         [class.active]="faq.isOpen"
         [attr.data-category]="faq.category"
+        data-aos="fade-up"
+        [attr.data-aos-delay]="300 + (i * 100)"
       >
         <div class="faq-question" (click)="toggleFAQ(faq.id)">
           <div class="question-content">
@@ -64,7 +66,7 @@
     </div>
 
     <!-- Bottom CTA -->
-    <div class="faq-bottom-cta">
+    <div class="faq-bottom-cta" data-aos="fade-up" data-aos-delay="400">
       <div class="cta-content">
         <h3 class="cta-title">Ainda tem dúvidas?</h3>
         <p class="cta-subtitle">Nossa equipe está pronta para ajudar você</p>
@@ -83,12 +85,5 @@
   </div>
 
   <!-- Background Elements -->
-  <div class="faq-background">
-    <div class="bg-gradient"></div>
-    <div class="floating-elements">
-      <div class="floating-element element-1"></div>
-      <div class="floating-element element-2"></div>
-      <div class="floating-element element-3"></div>
-    </div>
-  </div>
+  <div class="bg-gradient"></div>
 </section>

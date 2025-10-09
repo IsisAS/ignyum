@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import AOS from 'aos';
 
 interface FAQItem {
   id: number;
@@ -16,7 +17,7 @@ interface FAQItem {
   templateUrl: './faq.component.html',
   styleUrls: ['./faq.component.scss']
 })
-export class FaqComponent {
+export class FaqComponent implements OnInit {
   faqItems: FAQItem[] = [
     {
       id: 1,
@@ -75,6 +76,15 @@ export class FaqComponent {
       category: 'uso'
     }
   ];
+
+  ngOnInit(): void {
+    AOS.init({
+      duration: 800,
+      easing: 'ease-out-cubic',
+      once: true,
+      offset: 100
+    });
+  }
 
   toggleFAQ(id: number): void {
     const item = this.faqItems.find(faq => faq.id === id);
