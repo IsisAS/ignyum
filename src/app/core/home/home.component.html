@@ -4,9 +4,7 @@
   <!-- [1] HERO SECTION - "A primeira joia de energia líquida" -->
   <section class="hero-section" aria-labelledby="hero-title">
     <div class="hero-background">
-      <video class="hero-video" autoplay muted loop playsinline preload="auto" volume="0" aria-hidden="true">
-        <source src="assets/background.mp4" type="video/mp4">
-      </video>
+      <img class="hero-video" src="assets/background.gif" alt="" aria-hidden="true">
       <div class="video-overlay"></div>
       <div class="video-blend"></div>
       <div class="studio-lighting"></div>
@@ -471,20 +469,7 @@
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
-    // VIDEO CONTROL - Garantir que esteja sem som
-    const heroVideo = document.querySelector('.hero-video');
-    if (heroVideo) {
-      heroVideo.volume = 0;
-      heroVideo.muted = true;
 
-      // Garantir que o vídeo continue sem som mesmo se o usuário tentar alterar
-      heroVideo.addEventListener('volumechange', function () {
-        if (this.volume > 0 || !this.muted) {
-          this.volume = 0;
-          this.muted = true;
-        }
-      });
-    }
 
     // STICKY BAR
     const stickyBar = document.getElementById('stickyBar');
