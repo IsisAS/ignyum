@@ -1,0 +1,51 @@
+<header class="floating-header" [class.scrolled]="isScrolled">
+  <div class="header-container">
+    <!-- Logo Section -->
+    <div class="logo-section">
+      <a href="#" class="logo-link" (click)="scrollToSection('hero')">
+        <img src="assets/image/logo.svg" alt="IGNYUM" class="logo-image">
+      </a>
+    </div>
+
+    <!-- Navigation Menu -->
+    <nav class="nav-menu" [class.menu-open]="isMenuOpen">
+      <ul class="nav-list">
+        <li class="nav-item">
+          <a href="#" class="nav-link" (click)="scrollToSection('problema')">
+            Problema
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link" (click)="scrollToSection('solucao')">
+            Solução
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link" (click)="scrollToSection('experiencia')">
+            Experiência
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link" (click)="scrollToSection('depoimentos')">
+            Depoimentos
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- CTA Button -->
+    <button class="cta-button" (click)="scrollToSection('comprar')">
+      <img src="../../../assets/icons/bag.svg" class="w-4 h-4">
+    </button>
+
+    <!-- Mobile Menu Toggle -->
+    <button class="menu-toggle" (click)="toggleMenu()" [class.active]="isMenuOpen">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button>
+  </div>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu-overlay" [class.active]="isMenuOpen" (click)="toggleMenu()"></div>
+</header>
