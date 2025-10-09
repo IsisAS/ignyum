@@ -472,58 +472,133 @@
     }
   }
 
-  // Responsividade
+  // Responsividade para mobile
   @media (max-width: 768px) {
-    padding: 60px 0;
-
-    .section-title {
-      font-size: 2.5rem;
-      margin-bottom: 40px;
+    .promocoes-section {
+      padding: 40px 0;
+      min-height: auto;
     }
-
-    .carousel-container {
-      padding: 0 20px;
-    }
-
-    .produto-card {
-      min-width: 260px;
-      height: 400px;
-    }
-
-    .carousel-navigation {
-      display: none;
-    }
-  }
-
-  @media (max-width: 480px) {
-    padding: 40px 0;
 
     .section-title {
       font-size: 2rem;
-      margin-bottom: 30px;
+      margin-bottom: 15px;
+      letter-spacing: -0.3px;
+    }
+
+    .section-subtitle {
+      font-size: 1.1rem;
+      margin-bottom: 40px;
+      padding: 0 20px;
+      line-height: 1.5;
     }
 
     .carousel-container {
       padding: 0 10px;
     }
 
+    .produtos-carousel {
+      gap: 15px;
+      padding: 0 10px;
+    }
+
     .produto-card {
-      min-width: 240px;
-      height: 380px;
-      padding: 15px;
+      min-width: 280px;
+      height: 520px;
+      padding: 20px;
+      margin: 0 5px;
+    }
 
-      .card-header h3 {
-        font-size: 1.2rem;
+    .card-header {
+      .badge {
+        padding: 6px 12px;
+        font-size: 0.65rem;
+        letter-spacing: 0.8px;
+        margin-bottom: 12px;
       }
 
-      .pricing .price-main {
-        font-size: 1.8rem;
+      h3 {
+        font-size: 1rem;
+        margin: 0 0 6px 0;
+        letter-spacing: 0.2px;
       }
 
-      .buy-button {
-        padding: 12px 25px;
-        font-size: 0.9rem;
+      .product-description {
+        font-size: 0.8rem;
+        margin: 8px 0;
+      }
+    }
+
+    .produto-image {
+      width: 180px;
+      height: 180px;
+      margin: 20px auto;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+
+    .buy-button {
+      padding: 7px 14px;
+      font-size: 0.7rem;
+      border-radius: 16px;
+      margin-top: 10px;
+      letter-spacing: 0.6px;
+    }
+
+    .nav-button {
+      width: 35px;
+      height: 35px;
+      font-size: 1rem;
+      border-radius: 6px;
+
+      &.prev {
+        margin-left: 10px;
+      }
+
+      &.next {
+        margin-right: 10px;
       }
     }
   }
+
+  // Responsividade para telas muito pequenas
+  @media (max-width: 480px) {
+    .section-title {
+      font-size: 1.7rem;
+    }
+
+    .section-subtitle {
+      font-size: 1rem;
+      padding: 0 15px;
+    }
+
+    .produto-card {
+      min-width: 260px;
+      height: 480px;
+      padding: 18px;
+    }
+
+    .produto-image {
+      width: 160px;
+      height: 160px;
+      margin: 15px auto;
+    }
+
+    .card-header {
+      h3 {
+        font-size: 0.95rem;
+      }
+
+      .product-description {
+        font-size: 0.75rem;
+      }
+    }
+
+    .buy-button {
+      padding: 6px 12px;
+      font-size: 0.65rem;
+    }
+  }
+
 }
