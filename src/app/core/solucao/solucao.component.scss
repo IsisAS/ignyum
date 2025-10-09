@@ -584,6 +584,38 @@
   }
 }
 
+@keyframes iconFloat {
+  0%, 100% { 
+    transform: translateY(0px) rotate(0deg);
+  }
+  33% { 
+    transform: translateY(-3px) rotate(1deg);
+  }
+  66% { 
+    transform: translateY(2px) rotate(-1deg);
+  }
+}
+
+@keyframes iconGlow {
+  0% { 
+    filter: drop-shadow(0 2px 8px rgba(255, 107, 53, 0.3));
+  }
+  100% { 
+    filter: drop-shadow(0 4px 16px rgba(255, 107, 53, 0.6));
+  }
+}
+
+@keyframes iconGlowHover {
+  0% { 
+    filter: drop-shadow(0 4px 12px rgba(255, 107, 53, 0.5));
+    transform: scale(1);
+  }
+  100% { 
+    filter: drop-shadow(0 6px 20px rgba(255, 107, 53, 0.8));
+    transform: scale(1.02);
+  }
+}
+
 // TEXTO DA SOLUÇÃO
 .solution-text {
   color: #ffffff;
@@ -632,8 +664,40 @@
       }
       
       .bullet-icon {
-        font-size: 1.5rem;
-        margin-right: 1rem;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, rgba(255, 107, 53, 0.1), rgba(255, 140, 66, 0.1));
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 107, 53, 0.2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 20px;
+        box-shadow: 
+          0 8px 32px rgba(255, 107, 53, 0.2),
+          inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        animation: iconFloat 3s ease-in-out infinite;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        
+        svg {
+          width: 32px;
+          height: 32px;
+          filter: drop-shadow(0 2px 8px rgba(255, 107, 53, 0.3));
+          animation: iconGlow 2s ease-in-out infinite alternate;
+        }
+        
+        &:hover {
+          transform: translateY(-2px) scale(1.05);
+          box-shadow: 
+            0 12px 40px rgba(255, 107, 53, 0.3),
+            inset 0 1px 0 rgba(255, 255, 255, 0.2);
+          
+          svg {
+            filter: drop-shadow(0 4px 12px rgba(255, 107, 53, 0.5));
+            animation: iconGlowHover 1s ease-in-out infinite alternate;
+          }
+        }
       }
       
       span {
