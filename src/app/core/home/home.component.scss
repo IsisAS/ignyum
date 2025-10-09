@@ -180,8 +180,10 @@
 }
 
 .cta-discover {
-  background: linear-gradient(135deg, #FF6B35 0%, #FF8A00 100%);
-  border: none;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid #fff;
   padding: 20px 40px;
   border-radius: 50px;
   font-size: 1.25rem;
